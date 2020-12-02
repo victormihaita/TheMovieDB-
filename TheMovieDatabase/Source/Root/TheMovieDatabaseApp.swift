@@ -11,7 +11,13 @@ import SwiftUI
 struct TheMovieDatabaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                MoviesLandingView()
+                    .tabItem { Image(systemName: "film") }
+
+                TVLandingView()
+                    .tabItem { Image(systemName: "tv") }
+            }
         }
     }
 }
