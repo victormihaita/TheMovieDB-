@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Show: Codable, Identifiable {
+struct Show: Codable, Identifiable, Hashable {
     var id = UUID()
     let posterPath: String?
     let overview: String?

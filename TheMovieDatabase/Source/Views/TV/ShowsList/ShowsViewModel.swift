@@ -37,7 +37,6 @@ class ShowsViewModel: ObservableObject {
     func listItemAppears(_ show: Show) {
         guard shows.last?.id == show.id else { return }
         guard isLoading == false else { return }
-        guard shows.last?.id == show.id else { return }
         DispatchQueue.main.async {
             self.page += 1
             self.getShows()
