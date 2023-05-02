@@ -10,7 +10,7 @@ import SwiftUI
 struct MoviesView: View {
     @ObservedObject var viewModel: MoviesViewModel
 
-    private var rows: [GridItem] = [GridItem(.fixed(200), spacing: 0)]
+    private var rows: [GridItem] = [GridItem(.flexible(), spacing: 0)]
 
     init(type: MoviePath) {
         viewModel = MoviesViewModel(type: type)
