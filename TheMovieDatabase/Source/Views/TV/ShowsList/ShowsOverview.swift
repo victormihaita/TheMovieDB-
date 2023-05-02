@@ -27,6 +27,7 @@ struct ShowsOverview: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button{
+                    guard columns <= 2 else { return }
                     columns += 1
                 } label: {
                     Image(systemName: "plus")
@@ -35,7 +36,8 @@ struct ShowsOverview: View {
 
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button{
-                    columns = max(columns - 1, 0)
+                    guard columns > 1 else { return }
+                    columns -= 1
                 } label: {
                     Image(systemName: "minus")
                 }
